@@ -3,6 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { AppModule } from './app.module';
+import { HttpExceptionFilter } from './odd/filter/http-exception.filter';
 import { protobufPackage } from './odd/odds.pb';
 
 async function bootstrap() {
@@ -18,6 +19,7 @@ async function bootstrap() {
     },
   );
 
+  app.useGlobalFilters(new HttpExceptionFilter());
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
 
   await app.listen();
