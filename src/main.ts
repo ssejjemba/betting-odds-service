@@ -14,7 +14,7 @@ async function bootstrap() {
       options: {
         url: '0.0.0.0:50052',
         package: protobufPackage,
-        protoPath: join('node_modules/grpc-nest-proto/proto/odds.proto'),
+        protoPath: join('node_modules/betting-proto/proto/odds.proto'),
       },
     },
   );
