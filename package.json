@@ -20,7 +20,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "proto:install": "npm i git+https://github.com/ssejjemba/betting-proto.git",
-    "proto:odds": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/betting-proto/proto --ts_proto_out=src/odds/ node_modules/betting-proto/proto/odds.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb"
+    "proto:odds": "protoc --plugin=node_modules/.bin/protoc-gen-ts_proto -I=./node_modules/betting-proto/proto --ts_proto_out=src/odd/ node_modules/betting-proto/proto/odds.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.7.3",
